@@ -2,11 +2,21 @@ pipeline {
 
     agent any
 
+    tools {
+        maven 'Maven-3.9'
+    }
+
     stages {
 
-        stage('Checkout') {
+        stage('Java Version') {
             steps {
-                echo 'Checking out code'
+                sh 'java -version'
+            }
+        }
+
+        stage('Maven Version') {
+            steps {
+                sh 'mvn -version'
             }
         }
 
