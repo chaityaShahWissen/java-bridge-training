@@ -12,7 +12,6 @@ class CalculatorTest {
     void testAdd() {
 
         assertEquals(15,
-                calculator.add(10,5));
                 calculator.add(0,5));
     }
 
